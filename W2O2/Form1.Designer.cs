@@ -43,20 +43,20 @@
             this.btnResetGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnResetGame.Location = new System.Drawing.Point(12, 702);
             this.btnResetGame.Name = "btnResetGame";
-            this.btnResetGame.Size = new System.Drawing.Size(493, 37);
+            this.btnResetGame.Size = new System.Drawing.Size(141, 37);
             this.btnResetGame.TabIndex = 0;
-            this.btnResetGame.Text = "Reset Game (Standard life)";
+            this.btnResetGame.Text = "Standard Life";
             this.btnResetGame.UseVisualStyleBackColor = true;
             this.btnResetGame.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnResetGameHigh
             // 
             this.btnResetGameHigh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResetGameHigh.Location = new System.Drawing.Point(511, 702);
+            this.btnResetGameHigh.Location = new System.Drawing.Point(168, 704);
             this.btnResetGameHigh.Name = "btnResetGameHigh";
-            this.btnResetGameHigh.Size = new System.Drawing.Size(493, 37);
+            this.btnResetGameHigh.Size = new System.Drawing.Size(141, 37);
             this.btnResetGameHigh.TabIndex = 1;
-            this.btnResetGameHigh.Text = "Reset Game (High life)";
+            this.btnResetGameHigh.Text = "High Life";
             this.btnResetGameHigh.UseVisualStyleBackColor = true;
             this.btnResetGameHigh.Click += new System.EventHandler(this.btnResetGameHigh_Click);
             // 

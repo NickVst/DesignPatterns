@@ -5,10 +5,11 @@ namespace W2O3
     public class SimpleMP3Display : IObserver
     {
 
-        private MP3Player player;
+        private ISubject player;
 
-        public SimpleMP3Display(MP3Player player)
+        public SimpleMP3Display(ISubject player)
         {
+            player.AddObserver(this);
             this.player = player;
         }
 

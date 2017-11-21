@@ -1,9 +1,15 @@
 ﻿namespace W2O1.DataLoaders
 {
-    interface BigDataLoader
+    public abstract class BigDataLoader
     {
-        void Extract();
-        void Transform();
-        void Load();
+        public void ETL()
+        {
+            Extract();
+            Transform();
+            Load();
+        }
+        public abstract void Extract();
+        public abstract void Transform();
+        public abstract void Load();
     }
 }

@@ -3,15 +3,13 @@ using System.Drawing;
 
 namespace ConwayGameOfLife
 {
-    public class ConwayGameOfLife
+    public abstract class ConwayGameOfLife
     {
         const int WIDTH = 300;
         const int HEIGHT = 140;
         const int LIVECHANCE = 20; // each cell has a change to be (initially) alive
 
         private bool[,] space;
-
-        ILife life;
         SolidBrush liveBrush = new SolidBrush(Color.Red);
         SolidBrush deadBrush = new SolidBrush(Color.LightGray);
 
@@ -21,22 +19,12 @@ namespace ConwayGameOfLife
             // make space for life
             this.space = new bool[HEIGHT, WIDTH];
 
-            // Initially start game without high life
-            InitializeLife(false);
+            InitializeLife();
         }
 
         // initialize space with random life
-        private void InitializeLife(bool isHighLife)
+        private void InitializeLife()
         {
-            if (isHighLife)
-            {
-                life = new HighLife();
-            } else
-            {
-                life = new StandardLife();
-            }
-
-
             Random random = new Random(DateTime.Now.Millisecond);
 
             // process each row
@@ -51,9 +39,9 @@ namespace ConwayGameOfLife
             }
         }
 
-        public void Reset(bool isHighLife)
+        public void Reset()
         {
-            InitializeLife(isHighLife);
+            InitializeLife();
         }
 
         // draw the space
@@ -77,6 +65,7 @@ namespace ConwayGameOfLife
         }
 
         // evolve life
+        // BUG Template methode
         public void Evolve()
         {
             // copy space for testing (not modified) cells
@@ -98,24 +87,12 @@ namespace ConwayGameOfLife
                     int neighBourCount = GetLiveNeighbours(copySpace, r, c);
 
                     // cell should live?
-                    this.space[r, c] = life.CellShouldLive(livingCell, neighBourCount);
+                    this.space[r, c] = CellShouldLive(livingCell, neighBourCount);
                 }
             }
         }
 
-        private bool CellShouldLive(bool livingCell, int neighbourCount)
-        {
-            // with 3 neighbour cell will live
-            if (neighbourCount == 3)
-                return true;
-
-            // live cell with 2 neighbours stays alive
-            if (livingCell && neighbourCount == 2)
-                return true;
-
-            // dead cell
-            return false;
-        }
+        protected abstract bool CellShouldLive(bool livingCell, int neighbourCount);
 
         /// <summary>Count live neighbours of given cell.</summary>
         /// <param name="space"></param>

@@ -24,9 +24,7 @@ namespace W2O1.DataLoaders
         {
             foreach (BigDataLoader loader in loaders)
             {
-                loader.Extract();
-                loader.Transform();
-                loader.Load();
+                loader.ETL();
                 Console.WriteLine();
             }
         }

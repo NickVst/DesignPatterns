@@ -9,6 +9,7 @@ namespace W2O3
 
         public FancyMP3Display(MP3Player player)
         {
+            player.AddObserver(this);
             this.player = player;
         }
 

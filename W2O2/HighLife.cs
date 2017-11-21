@@ -1,24 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConwayGameOfLife
+﻿namespace ConwayGameOfLife
 {
-    class HighLife : ILife
+    public class HighLife : ConwayGameOfLife
     {
-        public bool CellShouldLive(bool livingCell, int neighbourCount)
+        protected override bool CellShouldLive(bool livingCell, int neighbourCount)
         {
-            if (neighbourCount == 2)
-            {
-                return livingCell;
-            }
-            else if (neighbourCount == 3 || neighbourCount == 6)
-            {
-                return true;
-            }
 
+            // with 3 neighbour cell will live
+            if (neighbourCount == 2)
+                return livingCell;
+
+            // live cell with 3 or 6 neighbours stays alive
+            if (neighbourCount == 3 || neighbourCount == 6)
+                return true;
+
+            // dead cell
             return false;
         }
     }

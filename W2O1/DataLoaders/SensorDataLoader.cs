@@ -4,17 +4,17 @@ namespace W2O1.DataLoaders
 {
     public class SensorDataLoader : BigDataLoader
     {
-        public void Extract()
+        public override void Extract()
         {
             Console.WriteLine("Extracting sensor data");
         }
 
-        public void Transform()
+        public override void Transform()
         {
             Console.WriteLine("Transforming sensor data");
         }
 
-        public void Load()
+        public override void Load()
         {
             Console.WriteLine("Loading sensor data");
         }

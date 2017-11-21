@@ -16,10 +16,11 @@ namespace ConwayGameOfLife
         private void Form1_Load(object sender, EventArgs e)
         {
             // create a game
-            game = new ConwayGameOfLife();
+            game = new StandardLife();
 
             // start the timer
             timer1.Enabled = true;
+
             this.DoubleBuffered = true;
         }
 
@@ -30,20 +31,20 @@ namespace ConwayGameOfLife
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
-            timer1.Interval = 1;
             game.Evolve();
             this.Refresh();
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            this.game.Reset(false);
+            game = new StandardLife();
+            this.game.Reset();
         }
 
         private void btnResetGameHigh_Click(object sender, EventArgs e)
         {
-            this.game.Reset(true);
+            game = new HighLife();
+            this.game.Reset();
         }
     }
 }

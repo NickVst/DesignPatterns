@@ -11,9 +11,6 @@ class Program
         // maak de displays aan       
         IObserver mp3Display1 = new SimpleMP3Display(player);
         IObserver mp3Display2 = new FancyMP3Display(player);
-
-        player.AddObserver(mp3Display1);
-        player.AddObserver(mp3Display2);
         
 
         // zet player op een nieuw nummer       
