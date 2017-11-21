@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9CE09820-8BB0-47E7-BFA3-E2AC4739D9F2}</ProjectGuid>
+    <ProjectGuid>{C4E75DCF-C1E3-4894-A73A-F43F342948EB}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>W1O1</RootNamespace>
-    <AssemblyName>W1O1</AssemblyName>
+    <RootNamespace>W1O3</RootNamespace>
+    <AssemblyName>W1O3</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,17 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BoekHandel.cs" />
-    <Compile Include="Items\Boek.cs" />
-    <Compile Include="Items\BoekHandelItem.cs" />
-    <Compile Include="Items\CD.cs" />
-    <Compile Include="Items\Weekblad.cs" />
+    <Compile Include="Items\IPotlood.cs" />
+    <Compile Include="Items\IPotloodSlijper.cs" />
+    <Compile Include="Items\Potlood.cs" />
+    <Compile Include="Items\PotloodSlijper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9CE09820-8BB0-47E7-BFA3-E2AC4739D9F2}</ProjectGuid>
+    <ProjectGuid>{A7C91D2A-B0C6-48AB-A2BD-A8073133EADA}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>W1O1</RootNamespace>
-    <AssemblyName>W1O1</AssemblyName>
+    <RootNamespace>W2O1</RootNamespace>
+    <AssemblyName>W2O1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,17 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BoekHandel.cs" />
-    <Compile Include="Items\Boek.cs" />
-    <Compile Include="Items\BoekHandelItem.cs" />
-    <Compile Include="Items\CD.cs" />
-    <Compile Include="Items\Weekblad.cs" />
+    <Compile Include="DataLoaders\BatchProcessor.cs" />
+    <Compile Include="DataLoaders\BigDataLoader.cs" />
+    <Compile Include="DataLoaders\CallDataLoader.cs" />
+    <Compile Include="DataLoaders\SensorDataLoader.cs" />
+    <Compile Include="DataLoaders\TwitterDataLoader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
