@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DCDBB13C-B51F-4F4C-8C99-C2FD2FBD099C}</ProjectGuid>
+    <ProjectGuid>{973E6C80-5DEA-4791-B134-1EB8E1B14E42}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>W3O1</RootNamespace>
-    <AssemblyName>W3O1</AssemblyName>
+    <RootNamespace>W5O2</RootNamespace>
+    <AssemblyName>W5O2</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,8 +34,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,53 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Views\ControlPanel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\ControlPanel.Designer.cs">
-      <DependentUpon>ControlPanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\ITreinController.cs" />
-    <Compile Include="Views\ITreinDisplay.cs" />
-    <Compile Include="Models\ITreinReis.cs" />
+    <Compile Include="CorrectePinStatus.cs" />
+    <Compile Include="GeenGeldStatus.cs" />
+    <Compile Include="GeenKaartStatus.cs" />
+    <Compile Include="IPinAutomaatStatus.cs" />
+    <Compile Include="KaartAanwezigStatus.cs" />
+    <Compile Include="PinAutomaat.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\ReisInfoDisplay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\ReisInfoDisplay.Designer.cs">
-      <DependentUpon>ReisInfoDisplay.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Station.cs" />
-    <Compile Include="Controllers\TreinController.cs" />
-    <Compile Include="Models\TreinReis.cs" />
-    <Compile Include="Views\ReisLijstDisplay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\ReisLijstDisplay.Designer.cs">
-      <DependentUpon>ReisLijstDisplay.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ReisLijstItem.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\ReisLijstItem.Designer.cs">
-      <DependentUpon>ReisLijstItem.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <EmbeddedResource Include="Views\ControlPanel.resx">
-      <DependentUpon>ControlPanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ReisInfoDisplay.resx">
-      <DependentUpon>ReisInfoDisplay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ReisLijstItem.resx">
-      <DependentUpon>ReisLijstItem.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

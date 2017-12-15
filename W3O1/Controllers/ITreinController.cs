@@ -1,13 +1,9 @@
-﻿using W3O1.Models;
-
-namespace W3O1.Controllers
+﻿namespace W3O1
 {
-    interface ITreinController
+    internal interface ITreinController
     {
-        ITreinReis TreinReis { get; set; }
-
         void VolgendStation();
-        void KeerOm();
-        
+        void AddObserver(ITreinDisplay treinDisplay);
+        void Reverse();
     }
 }

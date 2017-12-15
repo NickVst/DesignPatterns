@@ -1,22 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace W3O1.Models
+namespace W3O1
 {
-    public class Station
+    internal class Station
     {
-        // Je kunt niet een member met dezelfde naam als de klasse hebben..
-        public string Naam { get; set; }
+        public string VolgendStation { get; set; }
         public string AankomstSpoor { get; set; }
         public DateTime AankomstTijd { get; set; }
         public DateTime VertrekTijd { get; set; }
 
-        public Station(string naam, string aankomstSpoor, DateTime aankomstTijd, DateTime vertrekTijd)
+        public Station(string volgendStation, string aankomstSpoor, DateTime aankomstTijd, DateTime vertrekTijd)
         {
-            Naam = naam;
+            VolgendStation = volgendStation;
             AankomstSpoor = aankomstSpoor;
             AankomstTijd = aankomstTijd;
             VertrekTijd = vertrekTijd;

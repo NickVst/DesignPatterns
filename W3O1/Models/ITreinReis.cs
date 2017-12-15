@@ -1,13 +1,10 @@
-﻿namespace W3O1.Models
+﻿namespace W3O1
 {
-    public interface ITreinReis
+    internal interface ITreinReis
     {
-        void AddObserver(IObserver observer);
-        void RemoveObserver(IObserver observer);
-        void Notify();
-
+        void AddObserver(ITreinDisplay treinDisplay);
+        void RemoveObserver(ITreinDisplay treinDisplay);
         void VolgendStation();
-        void KeerOm();
-
+        void Reverse();
     }
 }

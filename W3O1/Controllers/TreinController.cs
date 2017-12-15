@@ -1,25 +1,28 @@
-﻿using W3O1.Models;
-
-namespace W3O1.Controllers
+﻿namespace W3O1
 {
-    public class TreinController : ITreinController
+    internal class TreinController : ITreinController
     {
-        public ITreinReis TreinReis { get; set; }
 
-        public TreinController()
+        private ITreinReis treinReis;
+
+        public TreinController(ITreinReis treinReis)
         {
-            TreinReis = new TreinReis();
+            this.treinReis = treinReis;
         }
 
         public void VolgendStation()
         {
-            TreinReis.VolgendStation();
+            treinReis.VolgendStation();
         }
 
-        public void KeerOm()
+        public void AddObserver(ITreinDisplay treinDisplay)
         {
-            TreinReis.KeerOm();
+            treinReis.AddObserver(treinDisplay);
+        }
+
+        public void Reverse()
+        {
+            treinReis.Reverse();
         }
     }
-    
 }

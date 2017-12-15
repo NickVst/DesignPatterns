@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using W3O1.Views;
 
 namespace W3O1
 {
@@ -11,7 +10,12 @@ namespace W3O1
     {
         static void Main(string[] args)
         {
-            new ControlPanel().ShowDialog();
+            ITreinReis treinReis = new TreinReis();
+            
+            ITreinController treinController = new TreinController(treinReis);
+
+            ControlPanel panel = new ControlPanel(treinController);
+            panel.ShowDialog();
         }
     }
 }

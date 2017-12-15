@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace W3O1.Views
 {
-    public partial class TreinDisplay : Form, ITreinDisplay
+    public partial class ReisLijstDisplay : Form, ITreinDisplay
     {
-        public TreinDisplay()
+        public ReisLijstDisplay()
         {
             InitializeComponent();
         }
 
-        public void UpdateLabels()
+        void ITreinDisplay.Update(Station station)
         {
-            // TODO labels updaten
-            // Kopieren van?
+            throw new NotImplementedException();
         }
     }
 }

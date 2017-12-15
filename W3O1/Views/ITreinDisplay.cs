@@ -1,7 +1,7 @@
-﻿namespace W3O1.Views
+﻿namespace W3O1
 {
-    public interface ITreinDisplay
+    internal interface ITreinDisplay
     {
-        void UpdateLabels();
+        void Update(Station station);
     }
 }

@@ -7,30 +7,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using W3O1.Controllers;
 
-namespace W3O1.Views
+namespace W3O1
 {
     public partial class ControlPanel : Form
     {
-        private ITreinController controller;
 
-        public ControlPanel()
+        private ITreinController treinController;
+
+        internal ControlPanel(ITreinController treinController)
         {
-            controller = new TreinController();
+            this.treinController = treinController;
+
             InitializeComponent();
         }
 
-        private void btn_VolgendStation_Click(object sender, EventArgs e)
+        private void btn_volgendStation_Click(object sender, EventArgs e)
         {
-            try
-            {
-                controller.VolgendStation();
-            }
-            catch (IndexOutOfRangeException)
-            {
-                controller.KeerOm();
-            }
+            treinController.VolgendStation();
+        }
+
+        private void btn_nieuwDisplay_Click(object sender, EventArgs e)
+        {
+            ReisInfoDisplay display = new ReisInfoDisplay();
+            treinController.AddObserver(display);
+            display.Show();
+        }
+
+        private void btn_return_Click(object sender, EventArgs e)
+        {
+            treinController.Reverse();
+        }
+
+        private void btn_lijstDisplay_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

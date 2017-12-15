@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DCDBB13C-B51F-4F4C-8C99-C2FD2FBD099C}</ProjectGuid>
+    <ProjectGuid>{1D82A1F7-F70B-4202-A03C-4F9107999578}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>W3O1</RootNamespace>
-    <AssemblyName>W3O1</AssemblyName>
+    <RootNamespace>W6O1</RootNamespace>
+    <AssemblyName>W6O1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,8 +34,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,53 +42,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Views\ControlPanel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\ControlPanel.Designer.cs">
-      <DependentUpon>ControlPanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\ITreinController.cs" />
-    <Compile Include="Views\ITreinDisplay.cs" />
-    <Compile Include="Models\ITreinReis.cs" />
+    <Compile Include="ComputerShop.cs" />
+    <Compile Include="Parts\HighBudgetHardDisk.cs" />
+    <Compile Include="Parts\HighBudgetMonitor.cs" />
+    <Compile Include="Parts\HighBudgetProcessor.cs" />
+    <Compile Include="HighBudgetShop.cs" />
+    <Compile Include="Parts\IHardDisk.cs" />
+    <Compile Include="Parts\IMonitor.cs" />
+    <Compile Include="Parts\IProcessor.cs" />
+    <Compile Include="Parts\LowBudgetHardDisk.cs" />
+    <Compile Include="Parts\LowBudgetMonitor.cs" />
+    <Compile Include="Parts\LowBudgetProcessor.cs" />
+    <Compile Include="LowBudgetShop.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\ReisInfoDisplay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\ReisInfoDisplay.Designer.cs">
-      <DependentUpon>ReisInfoDisplay.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Station.cs" />
-    <Compile Include="Controllers\TreinController.cs" />
-    <Compile Include="Models\TreinReis.cs" />
-    <Compile Include="Views\ReisLijstDisplay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\ReisLijstDisplay.Designer.cs">
-      <DependentUpon>ReisLijstDisplay.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ReisLijstItem.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\ReisLijstItem.Designer.cs">
-      <DependentUpon>ReisLijstItem.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <EmbeddedResource Include="Views\ControlPanel.resx">
-      <DependentUpon>ControlPanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ReisInfoDisplay.resx">
-      <DependentUpon>ReisInfoDisplay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\ReisLijstItem.resx">
-      <DependentUpon>ReisLijstItem.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
