@@ -14,12 +14,12 @@
         {
             treinReis.VolgendStation();
         }
-
+/*
         public void AddObserver(ITreinDisplay treinDisplay)
         {
             treinReis.AddObserver(treinDisplay);
         }
-
+        */
         public void Reverse()
         {
             treinReis.Reverse();

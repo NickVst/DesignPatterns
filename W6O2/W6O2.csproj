@@ -43,17 +43,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ComputerShop.cs" />
-    <Compile Include="HighBudgetHardDisk.cs" />
-    <Compile Include="HighBudgetMonitor.cs" />
-    <Compile Include="HighBudgetProcessor.cs" />
-    <Compile Include="HighBudgetShop.cs" />
-    <Compile Include="IHardDisk.cs" />
-    <Compile Include="IMonitor.cs" />
-    <Compile Include="IProcessor.cs" />
-    <Compile Include="LowBudgetHardDisk.cs" />
-    <Compile Include="LowBudgetMonitor.cs" />
-    <Compile Include="LowBudgetProcessor.cs" />
-    <Compile Include="LowBudgetShop.cs" />
+    <Compile Include="Parts\HighBudgetHardDisk.cs" />
+    <Compile Include="HighBudgetMachine.cs" />
+    <Compile Include="Parts\HighBudgetMonitor.cs" />
+    <Compile Include="Parts\HighBudgetProcessor.cs" />
+    <Compile Include="Parts\IHardDisk.cs" />
+    <Compile Include="IMachineFactory.cs" />
+    <Compile Include="Parts\IMonitor.cs" />
+    <Compile Include="Parts\IProcessor.cs" />
+    <Compile Include="Parts\LowBudgetHardDisk.cs" />
+    <Compile Include="LowBudgetMachine.cs" />
+    <Compile Include="Parts\LowBudgetMonitor.cs" />
+    <Compile Include="Parts\LowBudgetProcessor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

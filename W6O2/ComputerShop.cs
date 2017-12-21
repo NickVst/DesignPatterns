@@ -2,26 +2,29 @@
 
 namespace W6O1
 {
-    internal abstract class ComputerShop
+    internal class ComputerShop
     {
+        private IMachineFactory factory;
+
         private IProcessor processor;
         private IHardDisk hardDisk;
         private IMonitor monitor;
 
+        public ComputerShop(IMachineFactory factory)
+        {
+            this.factory = factory;
+        }
+
         internal void AssembleMachine()
         {
-            processor = CreateProcessor();
-            hardDisk = CreateHardDisk();
-            monitor = CreateMonitor();
+            processor = factory.CreateProcessor();
+            hardDisk = factory.CreateHardDisk();
+            monitor = factory.CreateMonitor();
 
             processor.PerformOperation();
             hardDisk.storeData();
             monitor.Display();
         }
-
-        internal abstract IProcessor CreateProcessor();
-        internal abstract IHardDisk CreateHardDisk();
-        internal abstract IMonitor CreateMonitor();
         
     }
 }

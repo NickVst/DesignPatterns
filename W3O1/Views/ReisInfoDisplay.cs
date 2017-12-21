@@ -12,9 +12,10 @@ namespace W3O1
 {
     public partial class ReisInfoDisplay : Form, ITreinDisplay
     {
-        public ReisInfoDisplay()
+        public ReisInfoDisplay(ITreinReis reis)
         {
             InitializeComponent();
+            reis.AddObserver(this);
         }
 
         void ITreinDisplay.Update(Station station)

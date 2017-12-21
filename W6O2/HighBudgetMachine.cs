@@ -1,18 +1,18 @@
 ﻿namespace W6O1
 {
-    internal class HighBudgetShop : ComputerShop
+    internal class HighBudgetMachine : IMachineFactory
     {
-        internal override IHardDisk CreateHardDisk()
+        public IHardDisk CreateHardDisk()
         {
             return new HighBudgetHardDisk();
         }
 
-        internal override IMonitor CreateMonitor()
+        public IMonitor CreateMonitor()
         {
             return new HighBudgetMonitor();
         }
 
-        internal override IProcessor CreateProcessor()
+        public IProcessor CreateProcessor()
         {
             return new HighBudgetProcessor();
         }

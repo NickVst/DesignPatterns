@@ -3,7 +3,7 @@
     internal interface ITreinController
     {
         void VolgendStation();
-        void AddObserver(ITreinDisplay treinDisplay);
+ //       void AddObserver(ITreinDisplay treinDisplay);
         void Reverse();
     }
 }

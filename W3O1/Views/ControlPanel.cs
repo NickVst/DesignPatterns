@@ -14,8 +14,9 @@ namespace W3O1
     {
 
         private ITreinController treinController;
+        // ...
 
-        internal ControlPanel(ITreinController treinController)
+        internal ControlPanel(ITreinController treinController, I)
         {
             this.treinController = treinController;
 
@@ -29,8 +30,8 @@ namespace W3O1
 
         private void btn_nieuwDisplay_Click(object sender, EventArgs e)
         {
-            ReisInfoDisplay display = new ReisInfoDisplay();
-            treinController.AddObserver(display);
+            ReisInfoDisplay display = new ReisInfoDisplay(...);
+//            treinController.AddObserver(display);
             display.Show();
         }
 
